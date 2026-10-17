@@ -44,7 +44,7 @@ export default function Home() {
       {/* 3. BAGIAN PROFIL PIMPINAN & PENDIRI (FULL FRAME) */}
       <section className="pb-16 px-4 max-w-5xl mx-auto">
         <h3 className="text-2xl md:text-3xl font-bold text-center text-[#134225] mb-10">
-          Profil Pimpinan & Pendiri
+          Pendiri & Pengasuh
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
