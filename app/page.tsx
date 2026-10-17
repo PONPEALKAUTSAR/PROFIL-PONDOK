@@ -1,19 +1,25 @@
-import React from 'react';
+import Navbar from "@/components/Navbar";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50 text-gray-800">
-      {/* BANNER UTAMA / HERO SECTION */}
-      <section className="relative w-full h-[380px] md:h-[480px] overflow-hidden shadow-lg bg-[#134225]">
+      {/* 1. Navbar Utama Website */}
+      <Navbar />
+
+      {/* 2. FOTO UTAMA / HERO BANNER */}
+      <section className="relative w-full h-[420px] md:h-[520px] overflow-hidden shadow-lg bg-[#134225]">
         <img 
           src="/images/sekolah.png" 
-          alt="Banner Pondok Pesantren Al Kautsar" 
+          alt="Foto Utama Pondok Pesantren Al Kautsar" 
           className="absolute inset-0 w-full h-full object-cover opacity-80"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+        {/* Lapisan Gradasi Gelap agar Teks Terbaca Jelas */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
         
+        {/* Teks Sambutan pada Banner Utama */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10 text-white">
-          <span className="px-4 py-1.5 mb-3 text-xs md:text-sm font-semibold tracking-widest uppercase bg-white/20 backdrop-blur-md rounded-full border border-white/30">
+          <span className="px-4 py-1.5 mb-3 text-xs md:text-sm font-semibold tracking-widest uppercase bg-white/20 backdrop-blur-md rounded-full border border-white/30 shadow-md">
             Yayasan Pendidikan Islam Al Kautsar
           </span>
           <h1 className="text-3xl md:text-5xl font-extrabold mb-3 drop-shadow-lg tracking-wide">
@@ -25,7 +31,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* BAGIAN SAMBUTAN */}
+      {/* 3. TOMBOL PINTASAN (SHORTCUTS) UNTUK BERPINDAH HALAMAN */}
+      <section className="py-8 px-4 max-w-5xl mx-auto -mt-10 relative z-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <Link href="/profil" className="bg-white hover:bg-[#134225] hover:text-white text-[#134225] font-semibold py-4 px-6 rounded-2xl shadow-lg transition-all duration-300 text-center border border-gray-100 group">
+            <div className="text-xl mb-1">🏛️</div>
+            <span>Profil Ponpes</span>
+          </Link>
+          <Link href="/pendidikan" className="bg-white hover:bg-[#134225] hover:text-white text-[#134225] font-semibold py-4 px-6 rounded-2xl shadow-lg transition-all duration-300 text-center border border-gray-100 group">
+            <div className="text-xl mb-1">📚</div>
+            <span>Pendidikan</span>
+          </Link>
+          <Link href="/fasilitas" className="bg-white hover:bg-[#134225] hover:text-white text-[#134225] font-semibold py-4 px-6 rounded-2xl shadow-lg transition-all duration-300 text-center border border-gray-100 group">
+            <div className="text-xl mb-1">🏫</div>
+            <span>Fasilitas</span>
+          </Link>
+          <Link href="/psb" className="bg-[#134225] hover:bg-[#0d2d18] text-white font-semibold py-4 px-6 rounded-2xl shadow-lg transition-all duration-300 text-center group">
+            <div className="text-xl mb-1">📝</div>
+            <span>Daftar PSB</span>
+          </Link>
+        </div>
+      </section>
+
+      {/* 4. BAGIAN SAMBUTAN / DESKRIPSI SINGKAT */}
       <section className="py-12 px-4 max-w-4xl mx-auto text-center">
         <h2 className="text-2xl md:text-3xl font-bold text-[#134225] mb-4">
           Selamat Datang di Portal Resmi Ponpes Al Kautsar
@@ -36,7 +64,7 @@ export default function Home() {
         <div className="w-24 h-1 bg-[#134225] mx-auto mt-6 rounded-full"></div>
       </section>
 
-      {/* BAGIAN PROFIL PIMPINAN & PENDIRI (FULL FRAME) */}
+      {/* 5. BAGIAN PROFIL PIMPINAN & PENDIRI (FULL FRAME) */}
       <section className="pb-16 px-4 max-w-5xl mx-auto">
         <h3 className="text-2xl md:text-3xl font-bold text-center text-[#134225] mb-10">
           Pendiri & Pengasuh
@@ -91,7 +119,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* 6. GALERI FOTO TAMBAHAN PENDUKUNG */}
+      <section className="py-16 px-4 max-w-5xl mx-auto bg-gray-100 rounded-3xl mb-16 shadow-inner">
+        <h3 className="text-2xl md:text-3xl font-bold text-center text-[#134225] mb-4">
+          Galeri & Suasana Ponpes
+        </h3>
+        <p className="text-center text-gray-600 mb-10 text-sm md:text-base">
+          Momen kebersamaan, kegiatan belajar, serta lingkungan asri di Pondok Pesantren Al Kautsar.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="overflow-hidden rounded-2xl shadow-md h-64 bg-white relative group">
+            <img src="/images/sekolah.png" alt="Suasana 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div className="overflow-hidden rounded-2xl shadow-md h-64 bg-white relative group">
+            <img src="/images/sekolah.png" alt="Suasana 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div className="overflow-hidden rounded-2xl shadow-md h-64 bg-white relative group">
+            <img src="/images/sekolah.png" alt="Suasana 3" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+        </div>
+      </section>
+
+      {/* Footer Website */}
       <footer className="bg-[#134225] text-white py-6 text-center text-sm">
         <p>&copy; {new Date().getFullYear()} Pondok Pesantren Al Kautsar. Semua Hak Cipta Dilindungi.</p>
       </footer>
