@@ -1,22 +1,17 @@
-import Navbar from "@/components/Navbar";
+import React from 'react';
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50 text-gray-800">
-      {/* Navbar Website */}
-      <Navbar />
-
-      {/* 1. BANNER UTAMA / HERO SECTION */}
+      {/* BANNER UTAMA / HERO SECTION */}
       <section className="relative w-full h-[380px] md:h-[480px] overflow-hidden shadow-lg bg-[#134225]">
         <img 
           src="/images/sekolah.png" 
           alt="Banner Pondok Pesantren Al Kautsar" 
           className="absolute inset-0 w-full h-full object-cover opacity-80"
         />
-        {/* Lapisan Gradasi Gelap agar Teks Terbaca Jelas */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
         
-        {/* Teks di atas Banner */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10 text-white">
           <span className="px-4 py-1.5 mb-3 text-xs md:text-sm font-semibold tracking-widest uppercase bg-white/20 backdrop-blur-md rounded-full border border-white/30">
             Yayasan Pendidikan Islam Al Kautsar
@@ -30,7 +25,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. BAGIAN SAMBUTAN / DETAIL SINGKAT */}
+      {/* BAGIAN SAMBUTAN */}
       <section className="py-12 px-4 max-w-4xl mx-auto text-center">
         <h2 className="text-2xl md:text-3xl font-bold text-[#134225] mb-4">
           Selamat Datang di Portal Resmi Ponpes Al Kautsar
@@ -41,7 +36,7 @@ export default function Home() {
         <div className="w-24 h-1 bg-[#134225] mx-auto mt-6 rounded-full"></div>
       </section>
 
-      {/* 3. BAGIAN PROFIL PIMPINAN & PENDIRI (FULL FRAME) */}
+      {/* BAGIAN PROFIL PIMPINAN & PENDIRI (FULL FRAME) */}
       <section className="pb-16 px-4 max-w-5xl mx-auto">
         <h3 className="text-2xl md:text-3xl font-bold text-center text-[#134225] mb-10">
           Pendiri & Pengasuh
@@ -56,7 +51,6 @@ export default function Home() {
               alt="Al Habib H Sholeh Al Iderus" 
               className="absolute inset-0 w-full h-full object-cover object-top"
             />
-            {/* Gradasi gelap di bagian bawah */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
             
             <div className="absolute bottom-0 left-0 right-0 p-6 text-white z-10">
@@ -79,7 +73,6 @@ export default function Home() {
               alt="Al Habib H Husein Faishal Iderus" 
               className="absolute inset-0 w-full h-full object-cover object-top"
             />
-            {/* Gradasi gelap di bagian bawah */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
             
             <div className="absolute bottom-0 left-0 right-0 p-6 text-white z-10">
@@ -98,7 +91,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer Sederhana */}
+      {/* Footer */}
       <footer className="bg-[#134225] text-white py-6 text-center text-sm">
         <p>&copy; {new Date().getFullYear()} Pondok Pesantren Al Kautsar. Semua Hak Cipta Dilindungi.</p>
       </footer>
