@@ -8,14 +8,25 @@ const unitPendidikan = [
     kepala: "Ustadz Abdul Manaf S.Pd", 
     foto: "/images/abdul-manaf.png",
     deskripsi: "Pendidikan keagamaan mendasar yang memfokuskan pada pendalaman ilmu fiqih, akidah akhlak, tauhid, serta dasar-dasar pembacaan kitab kuning dan Al-Quran bagi santri pemula.",
-    unggulan: ["Tahsin & Tahfidz Al-Quran", "Dasar Kitab Kuning", "Praktik Ibadah Harian"]
+    unggulan: ["Tahsin & Tahfidz Al-Quran", "Dasar Kitab Kuning", "Praktik Ibadah Harian"],
+    kitab: [
+      "Bidayatul Hidayah", 
+      "Muroqil Ubudiyyah", 
+      "Matan Jurumiyyah", 
+      "Mabadi Awwaliyah", 
+      "Muhawwarah"
+    ]
   },
   { 
     nama: "Madrasah Ibtidaiyah (MI)", 
     kepala: "Abdul Hafidz S.Pd", 
     foto: "/images/abdul-hafidz.png",
     deskripsi: "Pendidikan formal tingkat dasar yang memadukan kurikulum nasional (Kementerian Agama) dengan pembentukan karakter nilai-nilai Islam sejak usia dini.",
-    unggulan: ["Kurikulum Nasional & Agama", "Bimbingan Sholat Berjamaah", "Dasar Bahasa Arab & Inggris"]
+    unggulan: ["Kurikulum Nasional & Agama", "Bimbingan Sholat Berjamaah", "Dasar Bahasa Arab & Inggris"],
+    kitab: [
+      "Khulasah Nurul Yaqin", 
+      "Muhawwarah"
+    ]
   },
   { 
     nama: "Madrasah Tsanawiyah (MTs)", 
@@ -23,7 +34,15 @@ const unitPendidikan = [
     foto: "/images/irwan-subandi.png",
     deskripsi: "Pendidikan tingkat menengah pertama yang membekali santri dengan penguasaan ilmu pengetahuan umum serta pendalaman ilmu agama dan kedisiplinan pesantren.",
     unggulan: ["Kajian Kitab Fiqih & Nahwu Shorof", "Ekstrakurikuler Pramuka & Pidato", "Pembinaan Akhlak Remaja"],
-    akreditasi: "Terakreditasi B"
+    akreditasi: "Terakreditasi B",
+    kitab: [
+      "Kaylani", 
+      "Rohiqul Makhtum", 
+      "Mukhtashor Husnussiyaghoh", 
+      "Is’aful Haa’id", 
+      "Al-Waroqot", 
+      "Muhawwarah"
+    ]
   },
   { 
     nama: "Madrasah Aliyah (MA Al Kautsar)", 
@@ -31,7 +50,17 @@ const unitPendidikan = [
     foto: "/images/siti-mudrikah.png",
     deskripsi: "Pendidikan tingkat menengah atas yang mempersiapkan santri agar siap melanjutkan ke perguruan tinggi unggulan sekaligus memiliki kemandirian dakwah dan keilmuan matang.",
     unggulan: ["Penguasaan Kitab Kuning Lanjutan", "Keterampilan Teknologi & Komputer", "Bimbingan Masuk Perguruan Tinggi"],
-    akreditasi: "Terakreditasi A"
+    akreditasi: "Terakreditasi A",
+    kitab: [
+      "Is’afuttholibin", 
+      "Jalalain", 
+      "Syarah ‘Arrobiyah", 
+      "Alluma’", 
+      "Risalatani", 
+      "Zubdatul Itqon", 
+      "Al-Adzkar An-Nawawi", 
+      "Muhawwarah"
+    ]
   },
 ];
 
@@ -85,7 +114,7 @@ export default function PendidikanPage() {
               </div>
 
               {/* Bagian Program Unggulan */}
-              <div>
+              <div className="mb-6">
                 <h4 className="text-sm font-bold text-pesantren uppercase tracking-wider mb-3">
                   Program & Keunggulan Unit:
                 </h4>
@@ -100,6 +129,25 @@ export default function PendidikanPage() {
                   ))}
                 </div>
               </div>
+
+              {/* Bagian Kajian Kitab / Materi Belajar */}
+              {item.kitab && item.kitab.length > 0 && (
+                <div className="border-t border-gray-100 pt-4">
+                  <h4 className="text-sm font-bold text-gray-800 uppercase tracking-wider mb-3">
+                    📖 Kajian Kitab / Materi Utama:
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    {item.kitab.map((kitabItem, idx) => (
+                      <span 
+                        key={idx} 
+                        className="bg-gray-100 text-gray-700 text-xs sm:text-sm px-3 py-1 rounded-lg border border-gray-200 font-medium"
+                      >
+                        {kitabItem}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
 
             </div>
           </FadeIn>
