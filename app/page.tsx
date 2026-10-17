@@ -1,12 +1,7 @@
-import Navbar from "@/components/Navbar";
-
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50 text-gray-800">
-      {/* 1. Navbar Utama Website (Hanya 1 buah) */}
-      <Navbar />
-
-      {/* 2. FOTO UTAMA / HERO BANNER */}
+      {/* 1. FOTO UTAMA / HERO BANNER (Langsung tampil di atas tanpa duplikasi navbar) */}
       <section className="relative w-full h-[420px] md:h-[520px] overflow-hidden shadow-lg bg-[#134225]">
         <img 
           src="/images/sekolah.png" 
@@ -28,7 +23,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. TOMBOL PINTASAN (SHORTCUTS) */}
+      {/* 2. TOMBOL PINTASAN (SHORTCUTS) */}
       <section className="py-8 px-4 max-w-5xl mx-auto -mt-10 relative z-20">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <a href="/profil" className="bg-white hover:bg-[#134225] hover:text-white text-[#134225] font-semibold py-4 px-6 rounded-2xl shadow-lg transition-all duration-300 text-center border border-gray-100 group">
@@ -50,7 +45,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. BAGIAN SAMBUTAN */}
+      {/* 3. BAGIAN SAMBUTAN */}
       <section className="py-12 px-4 max-w-4xl mx-auto text-center">
         <h2 className="text-2xl md:text-3xl font-bold text-[#134225] mb-4">
           Selamat Datang di Portal Resmi Ponpes Al Kautsar
@@ -61,7 +56,7 @@ export default function Home() {
         <div className="w-24 h-1 bg-[#134225] mx-auto mt-6 rounded-full"></div>
       </section>
 
-      {/* 5. BAGIAN PROFIL PIMPINAN & PENDIRI (FULL FRAME) */}
+      {/* 4. BAGIAN PROFIL PIMPINAN & PENDIRI (FULL FRAME) */}
       <section className="pb-16 px-4 max-w-5xl mx-auto">
         <h3 className="text-2xl md:text-3xl font-bold text-center text-[#134225] mb-10">
           Pendiri & Pengasuh
@@ -116,29 +111,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. GALERI FOTO TAMBAHAN PENDUKUNG (foto1, foto2, foto3) */}
+      {/* 5. GALERI FOTO DENGAN ANIMASI KLIK & SENTUH */}
       <section className="py-16 px-4 max-w-5xl mx-auto bg-gray-100 rounded-3xl mb-16 shadow-inner">
         <h3 className="text-2xl md:text-3xl font-bold text-center text-[#134225] mb-4">
           Galeri & Suasana Ponpes
         </h3>
         <p className="text-center text-gray-600 mb-10 text-sm md:text-base">
-          Momen kebersamaan, kegiatan belajar, serta lingkungan asri di Pondok Pesantren Al Kautsar.
+          Klik atau sentuh foto di bawah ini untuk melihat animasi interaktif.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div className="overflow-hidden rounded-2xl shadow-md h-64 bg-white relative group">
-            <img src="/images/foto1.png" alt="Galeri Ponpes 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          
+          {/* Foto 1 */}
+          <div className="overflow-hidden rounded-2xl shadow-md h-64 bg-white relative group cursor-pointer transform transition duration-300 hover:scale-105 active:scale-95 hover:shadow-2xl">
+            <img src="/images/foto1.png" alt="Galeri Ponpes 1" className="w-full h-full object-cover transition duration-500 group-hover:scale-110" />
+            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+              <span className="text-white text-xs font-semibold bg-black/50 px-3 py-1 rounded-full backdrop-blur-sm">Suasana Pondok 1</span>
+            </div>
           </div>
-          <div className="overflow-hidden rounded-2xl shadow-md h-64 bg-white relative group">
-            <img src="/images/foto2.png" alt="Galeri Ponpes 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+
+          {/* Foto 2 */}
+          <div className="overflow-hidden rounded-2xl shadow-md h-64 bg-white relative group cursor-pointer transform transition duration-300 hover:scale-105 active:scale-95 hover:shadow-2xl">
+            <img src="/images/foto2.png" alt="Galeri Ponpes 2" className="w-full h-full object-cover transition duration-500 group-hover:scale-110" />
+            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+              <span className="text-white text-xs font-semibold bg-black/50 px-3 py-1 rounded-full backdrop-blur-sm">Suasana Pondok 2</span>
+            </div>
           </div>
-          <div className="overflow-hidden rounded-2xl shadow-md h-64 bg-white relative group">
-            <img src="/images/foto3.png" alt="Galeri Ponpes 3" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+
+          {/* Foto 3 */}
+          <div className="overflow-hidden rounded-2xl shadow-md h-64 bg-white relative group cursor-pointer transform transition duration-300 hover:scale-105 active:scale-95 hover:shadow-2xl">
+            <img src="/images/foto3.png" alt="Galeri Ponpes 3" className="w-full h-full object-cover transition duration-500 group-hover:scale-110" />
+            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+              <span className="text-white text-xs font-semibold bg-black/50 px-3 py-1 rounded-full backdrop-blur-sm">Suasana Pondok 3</span>
+            </div>
           </div>
+
         </div>
       </section>
 
-      {/* Footer Website (Hanya 1 buah) */}
+      {/* Footer Website (Hanya 1 di bagian paling bawah) */}
       <footer className="bg-[#134225] text-white py-6 text-center text-sm">
         <p>&copy; 2026 Pondok Pesantren Al Kautsar. Semua Hak Cipta Dilindungi.</p>
       </footer>
