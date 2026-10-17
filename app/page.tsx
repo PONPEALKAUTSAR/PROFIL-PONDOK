@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -14,10 +13,8 @@ export default function Home() {
           alt="Foto Utama Pondok Pesantren Al Kautsar" 
           className="absolute inset-0 w-full h-full object-cover opacity-80"
         />
-        {/* Lapisan Gradasi Gelap agar Teks Terbaca Jelas */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
         
-        {/* Teks Sambutan pada Banner Utama */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10 text-white">
           <span className="px-4 py-1.5 mb-3 text-xs md:text-sm font-semibold tracking-widest uppercase bg-white/20 backdrop-blur-md rounded-full border border-white/30 shadow-md">
             Yayasan Pendidikan Islam Al Kautsar
@@ -31,29 +28,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. TOMBOL PINTASAN (SHORTCUTS) UNTUK BERPINDAH HALAMAN */}
+      {/* 3. TOMBOL PINTASAN (SHORTCUTS) */}
       <section className="py-8 px-4 max-w-5xl mx-auto -mt-10 relative z-20">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <Link href="/profil" className="bg-white hover:bg-[#134225] hover:text-white text-[#134225] font-semibold py-4 px-6 rounded-2xl shadow-lg transition-all duration-300 text-center border border-gray-100 group">
+          <a href="/profil" className="bg-white hover:bg-[#134225] hover:text-white text-[#134225] font-semibold py-4 px-6 rounded-2xl shadow-lg transition-all duration-300 text-center border border-gray-100 group">
             <div className="text-xl mb-1">🏛️</div>
             <span>Profil Ponpes</span>
-          </Link>
-          <Link href="/pendidikan" className="bg-white hover:bg-[#134225] hover:text-white text-[#134225] font-semibold py-4 px-6 rounded-2xl shadow-lg transition-all duration-300 text-center border border-gray-100 group">
+          </a>
+          <a href="/pendidikan" className="bg-white hover:bg-[#134225] hover:text-white text-[#134225] font-semibold py-4 px-6 rounded-2xl shadow-lg transition-all duration-300 text-center border border-gray-100 group">
             <div className="text-xl mb-1">📚</div>
             <span>Pendidikan</span>
-          </Link>
-          <Link href="/fasilitas" className="bg-white hover:bg-[#134225] hover:text-white text-[#134225] font-semibold py-4 px-6 rounded-2xl shadow-lg transition-all duration-300 text-center border border-gray-100 group">
+          </a>
+          <a href="/fasilitas" className="bg-white hover:bg-[#134225] hover:text-white text-[#134225] font-semibold py-4 px-6 rounded-2xl shadow-lg transition-all duration-300 text-center border border-gray-100 group">
             <div className="text-xl mb-1">🏫</div>
             <span>Fasilitas</span>
-          </Link>
-          <Link href="/psb" className="bg-[#134225] hover:bg-[#0d2d18] text-white font-semibold py-4 px-6 rounded-2xl shadow-lg transition-all duration-300 text-center group">
+          </a>
+          <a href="/psb" className="bg-[#134225] hover:bg-[#0d2d18] text-white font-semibold py-4 px-6 rounded-2xl shadow-lg transition-all duration-300 text-center group">
             <div className="text-xl mb-1">📝</div>
             <span>Daftar PSB</span>
-          </Link>
+          </a>
         </div>
       </section>
 
-      {/* 4. BAGIAN SAMBUTAN / DESKRIPSI SINGKAT */}
+      {/* 4. BAGIAN SAMBUTAN */}
       <section className="py-12 px-4 max-w-4xl mx-auto text-center">
         <h2 className="text-2xl md:text-3xl font-bold text-[#134225] mb-4">
           Selamat Datang di Portal Resmi Ponpes Al Kautsar
