@@ -140,7 +140,7 @@ export default function Home() {
 
       {/* Footer Website */}
       <footer className="bg-[#134225] text-white py-6 text-center text-sm">
-        <p>&copy; {new Date().getFullYear()} Pondok Pesantren Al Kautsar. Semua Hak Cipta Dilindungi.</p>
+        <p>&copy; 2026 Pondok Pesantren Al Kautsar. Semua Hak Cipta Dilindungi.</p>
       </footer>
     </main>
   );
