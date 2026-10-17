@@ -5,7 +5,7 @@ import FadeIn from "@/components/FadeIn";
 export default function PendidikanPage() {
   const madrasah = [
     { nama: "Madrasah Diniyah (Ula & Wustho)", kepala: "Ustadz Abdul Manaf S.Pd", foto: "/images/ustadz-manaf.png" },
-    { nama: "Madrasah Ibtidaiyah (MI)", kepala: "Berdiri sejak 2005 (NSM: 112.630208017)", foto: "/images/kepala-mi.png" },
+    { nama: "Madrasah Ibtidaiyah (MI)", kepala: "Abdul Hafidz S.Pd", foto: "/images/kepala-mi.png" },
     { nama: "Madrasah Tsanawiyah (MTs)", kepala: "Irwan Subandi S.Pd", foto: "/images/irwan-subandi.png" },
     { nama: "Madrasah Aliyah (MA)", kepala: "Siti Mudrikah S.Pd", foto: "/images/siti-mudrikah.png" }
   ];
