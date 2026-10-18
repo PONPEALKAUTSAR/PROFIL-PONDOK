@@ -3,76 +3,60 @@
 import FadeIn from "@/components/FadeIn";
 
 export default function ProfilPage() {
-  const pimpinan = [
-    { nama: "Al Habib H Sholeh Al Iderus", jabatan: "Pendiri Pesantren", foto: "/images/habib-sholeh.png" },
-    { nama: "Al Habib H Husein Faishal Iderus", jabatan: "Pengasuh & Pimpinan", foto: "/images/habib-husein.png" }
-  ];
-
   return (
-    <div className="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+    <div className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
       <FadeIn>
-        <h1 className="text-3xl font-bold text-gray-900 mb-8 text-center border-b-4 border-pesantren inline-block pb-2">
-          Profil & Sejarah
-        </h1>
+        <div className="text-center mb-16">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#134225] mb-4 border-b-4 border-[#134225] inline-block pb-3">
+            Profil & Pimpinan Pesantren
+          </h1>
+        </div>
       </FadeIn>
 
-      <div className="prose prose-lg text-gray-700 max-w-none mb-20">
-        <FadeIn delay={0.2}>
-          <h2 className="text-2xl font-bold text-pesantren mt-8 mb-4">Sejarah Pendirian</h2>
-          <p className="mb-4 text-justify">
-            Berdirinya pondok pesantren Al Kautsar diawali pada tanggal 10 Muharram 1419 H (1998 M). Al-Habib H Sholeh mengundang seluruh murid beliau untuk memperingati haul Datuk Husein. Pada momen ini disepakati pembangunan masjid yang peletakan batu pertamanya dilaksanakan pada 12 Rabiul Awal 1419 H.
-          </p>
-          <p className="mb-4 text-justify">
-            Setelah masjid berdiri, penduduk hijrah ke komplek Al Kautsar. Al Habib Sholeh bersama dua muridnya, M. Ridwan Sholeh dan K.H Hasan Effendi mendirikan Pondok Pesantren pada tahun 2002 M dalam bentuk Salafiyah. Seiring pemekaran Kabupaten Tanah Bumbu, pesantren berkembang menjadi penyelenggara Wajar Formal (MI, MTs, dan MA).
-          </p>
+      {/* Grid diubah menjadi 3 kolom untuk layar besar */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        
+        {/* 1. Pendiri */}
+        <FadeIn delay={0.1}>
+          <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 text-center hover:shadow-xl transition h-full flex flex-col">
+            <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-[#134225]/20 mb-6 shadow-md bg-gray-100 flex-shrink-0">
+              <img src="/images/habib-sholeh.png" alt="Al Habib H Sholeh Al Iderus" className="w-full h-full object-cover" />
+            </div>
+            <h2 className="text-xl font-bold text-[#134225] mb-2">Al Habib H. Sholeh Al Iderus</h2>
+            <p className="text-gray-600 font-medium mt-auto">Pendiri Pondok Pesantren Al Kautsar</p>
+          </div>
         </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-          <FadeIn delay={0.4}>
-            <div className="bg-pesantren-light p-8 rounded-2xl h-full border-t-4 border-pesantren shadow-sm">
-              <h2 className="text-2xl font-bold text-pesantren mb-4">Visi</h2>
-              <p className="italic font-medium text-gray-900">
-                "Terwujudnya sumber daya manusia yg islami, berakhlak mulia, cerdas, terampil, sehat jasmani dan rohani, bersatu, maju, mandiri, dan unggul."
-              </p>
+        {/* 2. Pengasuh */}
+        <FadeIn delay={0.2}>
+          <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 text-center hover:shadow-xl transition h-full flex flex-col">
+            <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-[#134225]/20 mb-6 shadow-md bg-gray-100 flex-shrink-0">
+              <img src="/images/habib-husein.png" alt="Al Habib H Husein Faishal Iderus" className="w-full h-full object-cover object-top" />
             </div>
-          </FadeIn>
+            <h2 className="text-xl font-bold text-[#134225] mb-2">Al Habib H. Husein Faishal Iderus</h2>
+            <p className="text-gray-600 font-medium mt-auto">Pengasuh & Pimpinan Pondok Pesantren</p>
+          </div>
+        </FadeIn>
 
-          <FadeIn delay={0.6}>
-            <div className="bg-white border border-gray-200 p-8 rounded-2xl h-full shadow-sm">
-              <h2 className="text-2xl font-bold text-pesantren mb-4">Misi</h2>
-              <ol className="list-decimal pl-5 space-y-2 text-base">
-                <li>Melaksanakan pembinaan SDM berkualitas melalui pendidikan islam.</li>
-                <li>Meningkatkan mutu keterampilan bahasa Arab.</li>
-                <li>Melaksanakan tata administrasi berbasis teknologi.</li>
-                <li>M menciptakan suasana yg mendukung kreativitas ustadz/ustadzah.</li>
-                <li>Meningkatkan kesadaran 7K (ketertiban, keamanan, kebersihan, kesehatan, kekeluargaan, kerindangan, keimanan dan ketaqwaan).</li>
-              </ol>
+        {/* 3. Penasehat (BARU) */}
+        <FadeIn delay={0.3}>
+          <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 text-center hover:shadow-xl transition h-full flex flex-col">
+            <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-[#134225]/20 mb-6 shadow-md bg-gray-100 flex-shrink-0 relative">
+              {/* Gambar ini akan mencari file hasan-effendy.png di folder public/images */}
+              <img 
+                src="/images/hasan-effendy.png" 
+                alt="KH Hasan Effendy" 
+                className="w-full h-full object-cover object-top" 
+                // Jika foto belum ada, akan otomatis menampilkan inisial
+                onError={(e) => { e.currentTarget.src = 'https://ui-avatars.com/api/?name=KH+Hasan&background=134225&color=fff&size=160'; }}
+              />
             </div>
-          </FadeIn>
-        </div>
+            <h2 className="text-xl font-bold text-[#134225] mb-2">KH. Hasan Effendy MR., S.Pd., M.Pd.</h2>
+            <p className="text-gray-600 font-medium mt-auto">Penasehat Pondok Pesantren</p>
+          </div>
+        </FadeIn>
+
       </div>
-
-      {/* Bagian Pengasuh & Pimpinan */}
-      <FadeIn delay={0.2}>
-        <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center border-b-4 border-pesantren inline-block pb-2">
-          Pendiri & Pengasuh
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-          {pimpinan.map((item, index) => (
-            <div key={index} className="flex flex-col items-center text-center bg-white p-8 rounded-2xl shadow-md border border-gray-100">
-              <div className="w-40 h-40 rounded-full overflow-hidden mb-6 border-4 border-pesantren-light shadow-inner relative">
-                <img 
-                  src={item.foto} 
-                  alt={item.nama} 
-                  className="w-full h-full object-cover object-top" 
-                />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900">{item.nama}</h3>
-              <p className="text-pesantren font-medium mt-1">{item.jabatan}</p>
-            </div>
-          ))}
-        </div>
-      </FadeIn>
     </div>
   );
 }
