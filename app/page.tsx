@@ -48,7 +48,7 @@ export default function Home() {
       {/* 3. BAGIAN SAMBUTAN */}
       <section className="py-12 px-4 max-w-4xl mx-auto text-center">
         <h2 className="text-2xl md:text-3xl font-bold text-[#134225] mb-4">
-          Selamat Datang di Portal Resmi Ponpes Al Kautsar
+          Selamat Datang di Website Resmi Ponpes Al Kautsar
         </h2>
         <p className="text-gray-600 leading-relaxed text-sm md:text-base">
           Pondok Pesantren Al Kautsar terus berkomitmen memberikan pendidikan Islam terbaik, memadukan ilmu keagamaan, pembentukan karakter spiritual, serta pendidikan formal demi masa depan santri yang gemilang.
