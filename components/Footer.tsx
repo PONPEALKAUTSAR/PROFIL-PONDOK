@@ -119,7 +119,7 @@ export default function Footer() {
 				</div>
 
 				<div className="border-t border-white/10 pt-6 text-center text-xs text-gray-500">
-					© {new Date().getFullYear()} Pondok Pesantren Al Kautsar. Hak cipta
+					© 2026 Pondok Pesantren Al Kautsar. Hak cipta dilindungi.
 					dilindungi.
 				</div>
 			</div>
