@@ -56,15 +56,29 @@ export default function Footer() {
           <div className="md:col-span-4">
             <h3 className="text-gray-500 font-semibold mb-6 text-base">Kontak Kami</h3>
             <ul className="space-y-6">
+              
+              {/* Alamat Lengkap & Link Google Earth / Maps */}
               <li className="flex items-start gap-4">
                 <span className="mt-0.5 text-gray-400">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
                 </span>
                 <div>
                   <h4 className="text-white font-medium mb-1">Alamat</h4>
-                  <p className="text-gray-400 leading-relaxed">Al Kautsar - Satui -Kalimantan Selatan-Indonesia</p>
+                  <p className="text-gray-400 leading-relaxed text-xs">
+                    Al Kautsar, Kec. Satui, Kabupaten Tanah Bumbu, Kalimantan Selatan 72275
+                  </p>
+                  <p className="text-gray-500 text-xs mt-1">Koordinat: 7F2G+MCQ</p>
+                  <a 
+                    href="https://maps.google.com/?q=7F2G+MCQ,+Al+Kautsar,+Kec.+Satui,+Kabupaten+Tanah+Bumbu,+Kalimantan+Selatan+72275" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center gap-1.5 mt-2 text-xs font-semibold text-green-400 hover:text-green-300 transition underline underline-offset-4"
+                  >
+                    <span>🌍 Buka di Google Earth / Maps</span>
+                  </a>
                 </div>
               </li>
+
               <li className="flex items-start gap-4">
                 <span className="mt-0.5 text-gray-400">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.539-4.239-7.135-7.135l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
@@ -74,15 +88,17 @@ export default function Footer() {
                   <p className="text-gray-400">+62 812-3456-7890</p>
                 </div>
               </li>
+
               <li className="flex items-start gap-4">
                 <span className="mt-0.5 text-gray-400">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
                 </span>
                 <div>
                   <h4 className="text-white font-medium mb-1">Email</h4>
-                  <p className="text-gray-400">alkautsar176@gmail.com</p>
+                  <p className="text-gray-400">info@myalkautsar.info</p>
                 </div>
               </li>
+
             </ul>
           </div>
           
