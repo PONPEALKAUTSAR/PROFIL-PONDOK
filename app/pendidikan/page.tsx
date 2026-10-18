@@ -12,13 +12,6 @@ const unitPendidikan = [
     akreditasi: "Terakreditasi B"
   },
   { 
-    nama: "Madrasah Diniyah ( pendidikan non - formal )", 
-    kepala: "Ustadz Abdul Manaf S.Pd", 
-    foto: "/images/abdul-manaf.png",
-    deskripsi: "Pendidikan keagamaan mendasar yang memfokuskan pada pendalaman ilmu fiqih, akidah akhlak, tauhid, serta dasar-dasar pembacaan kitab kuning dan Al-Quran bagi santri pemula.",
-    unggulan: [" Lughah arabiyah", "Dasar Kitab Kuning", "Praktik Ibadah Harian" , " Kalighrafi "]
-  },
-  { 
     nama: "Madrasah Ibtidaiyah (MI)", 
     kepala: "Abdul Hafidz S.Pd", 
     foto: "/images/abdul-hafidz.png",
@@ -41,6 +34,14 @@ const unitPendidikan = [
     unggulan: ["Extrakulikuler Pramuka", "Keterampilan Teknologi & Komputer", "Bimbingan Masuk Perguruan Tinggi"],
     akreditasi: "Terakreditasi A"
   },
+  { 
+    nama: "TK Alwiyah", 
+    kepala: "Muhrotul Jarniah S.Pd", 
+    foto: "/images/muhrotul-jarniah.png",
+    deskripsi: "Pendidikan anak usia dini berbasis Islam yang menanamkan nilai-nilai keimanan, pembentukan karakter, serta pengembangan motorik dan kreativitas anak sejak dini dalam suasana yang menyenangkan.",
+    unggulan: ["Dasar-dasar Keislaman", "Pembentukan Karakter Anak", "Motorik & Kreativitas", "Bermain Sambil Belajar"],
+
+  }, 
 ];
 
 export default function PendidikanPage() {
