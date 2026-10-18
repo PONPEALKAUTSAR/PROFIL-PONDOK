@@ -16,6 +16,7 @@ export default function Navbar() {
     { name: "Kajian Kitab", href: "/kitab" },
     { name: "Fasilitas", href: "/fasilitas" },
     { name: "Peraturan", href: "/peraturan" },
+    { name: "Berita", href: "/berita" },
     { name: "PSB", href: "/psb" },
   ];
 
