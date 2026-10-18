@@ -90,7 +90,7 @@ export default function Home() {
           <div className="relative w-full h-[500px] overflow-hidden rounded-3xl shadow-xl bg-[#134225]">
             <img 
               src="/images/habib-husein.png" 
-              alt="Al Habib H Husein Faishal Iderus" 
+              alt="Al Habib H Husein Faishal Al Iderus" 
               className="absolute inset-0 w-full h-full object-cover object-top"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
