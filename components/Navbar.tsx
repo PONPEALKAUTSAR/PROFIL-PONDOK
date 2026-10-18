@@ -33,7 +33,7 @@ export default function Navbar() {
               <span className="text-base font-bold text-[#134225] tracking-tight">
                 Ponpes Al Kautsar
               </span>
-              <span className="text-xs text-gray-500 font-medium">Tanah Laut, Kalsel</span>
+              <span className="text-xs text-gray-500 font-medium">tanah Bumbu, Kalsel</span>
             </div>
           </Link>
 
