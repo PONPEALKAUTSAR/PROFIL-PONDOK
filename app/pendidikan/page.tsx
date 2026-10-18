@@ -8,25 +8,14 @@ const unitPendidikan = [
     kepala: "Ustadz Abdul Manaf S.Pd", 
     foto: "/images/abdul-manaf.png",
     deskripsi: "Pendidikan keagamaan mendasar yang memfokuskan pada pendalaman ilmu fiqih, akidah akhlak, tauhid, serta dasar-dasar pembacaan kitab kuning dan Al-Quran bagi santri pemula.",
-    unggulan: ["Tahsin & Tahfidz Al-Quran", "Dasar Kitab Kuning", "Praktik Ibadah Harian"],
-    kitab: [
-      "Bidayatul Hidayah", 
-      "Muroqil Ubudiyyah", 
-      "Matan Jurumiyyah", 
-      "Mabadi Awwaliyah", 
-      "Muhawwarah"
-    ]
+    unggulan: ["Tahsin & Tahfidz Al-Quran", "Dasar Kitab Kuning", "Praktik Ibadah Harian"]
   },
   { 
     nama: "Madrasah Ibtidaiyah (MI)", 
     kepala: "Abdul Hafidz S.Pd", 
     foto: "/images/abdul-hafidz.png",
     deskripsi: "Pendidikan formal tingkat dasar yang memadukan kurikulum nasional (Kementerian Agama) dengan pembentukan karakter nilai-nilai Islam sejak usia dini.",
-    unggulan: ["Kurikulum Nasional & Agama", "Bimbingan Sholat Berjamaah", "Dasar Bahasa Arab & Inggris"],
-    kitab: [
-      "Khulasah Nurul Yaqin", 
-      "Muhawwarah"
-    ]
+    unggulan: ["Kurikulum Nasional & Agama", "Bimbingan Sholat Berjamaah", "Dasar Bahasa Arab & Inggris"]
   },
   { 
     nama: "Madrasah Tsanawiyah (MTs)", 
@@ -34,15 +23,7 @@ const unitPendidikan = [
     foto: "/images/irwan-subandi.png",
     deskripsi: "Pendidikan tingkat menengah pertama yang membekali santri dengan penguasaan ilmu pengetahuan umum serta pendalaman ilmu agama dan kedisiplinan pesantren.",
     unggulan: ["Kajian Kitab Fiqih & Nahwu Shorof", "Ekstrakurikuler Pramuka & Pidato", "Pembinaan Akhlak Remaja"],
-    akreditasi: "Terakreditasi B",
-    kitab: [
-      "Kaylani", 
-      "Rohiqul Makhtum", 
-      "Mukhtashor Husnussiyaghoh", 
-      "Is’aful Haa’id", 
-      "Al-Waroqot", 
-      "Muhawwarah"
-    ]
+    akreditasi: "Terakreditasi B"
   },
   { 
     nama: "Madrasah Aliyah (MA Al Kautsar)", 
@@ -50,17 +31,7 @@ const unitPendidikan = [
     foto: "/images/siti-mudrikah.png",
     deskripsi: "Pendidikan tingkat menengah atas yang mempersiapkan santri agar siap melanjutkan ke perguruan tinggi unggulan sekaligus memiliki kemandirian dakwah dan keilmuan matang.",
     unggulan: ["Penguasaan Kitab Kuning Lanjutan", "Keterampilan Teknologi & Komputer", "Bimbingan Masuk Perguruan Tinggi"],
-    akreditasi: "Terakreditasi A",
-    kitab: [
-      "Is’afuttholibin", 
-      "Jalalain", 
-      "Syarah ‘Arrobiyah", 
-      "Alluma’", 
-      "Risalatani", 
-      "Zubdatul Itqon", 
-      "Al-Adzkar An-Nawawi", 
-      "Muhawwarah"
-    ]
+    akreditasi: "Terakreditasi A"
   },
 ];
 
@@ -73,7 +44,7 @@ export default function PendidikanPage() {
             Unit Pendidikan Formal & Non-Formal
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto text-base">
-            Pondok Pesantren Al Kautsar menyelenggarakan sistem pendidikan terpadu yang memadukan ilmu pengetahuan umum dan ilmu keislaman mendalam untuk mencetak kader ulama dan intelektual yang berakhlak mulia.
+            Pondok Pesantren Al Kautsar menyelenggarakan sistem pendidikan terpadu yang memadukan ilmu pengetahuan umum dan ilmu keislaman mendalam.
           </p>
         </div>
       </FadeIn>
@@ -82,22 +53,13 @@ export default function PendidikanPage() {
         {unitPendidikan.map((item, index) => (
           <FadeIn key={index} delay={index * 0.1}>
             <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl transition duration-300">
-              
-              {/* Bagian Header Unit & Kepala Sekolah */}
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 border-b border-gray-100 pb-6 mb-6">
                 <div className="flex-shrink-0 w-24 h-24 rounded-full overflow-hidden border-4 border-pesantren-light shadow-md relative bg-gray-100">
-                  <img 
-                    src={item.foto} 
-                    alt={item.kepala} 
-                    className="w-full h-full object-cover object-top" 
-                  />
+                  <img src={item.foto} alt={item.kepala} className="w-full h-full object-cover object-top" />
                 </div>
-                
                 <div className="text-center sm:text-left flex-grow">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-1">
-                    <h2 className="text-2xl font-bold text-pesantren">
-                      {item.nama}
-                    </h2>
+                    <h2 className="text-2xl font-bold text-pesantren">{item.nama}</h2>
                     {item.akreditasi && (
                       <span className="inline-block bg-[#134225] text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm w-fit mx-auto sm:mx-0">
                         {item.akreditasi}
@@ -107,48 +69,19 @@ export default function PendidikanPage() {
                   <p className="text-lg text-gray-700 font-medium mb-3">
                     Kepala Sekolah: <span className="text-gray-900 font-semibold">{item.kepala}</span>
                   </p>
-                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                    {item.deskripsi}
-                  </p>
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{item.deskripsi}</p>
                 </div>
               </div>
-
-              {/* Bagian Program Unggulan */}
-              <div className="mb-6">
-                <h4 className="text-sm font-bold text-pesantren uppercase tracking-wider mb-3">
-                  Program & Keunggulan Unit:
-                </h4>
+              <div>
+                <h4 className="text-sm font-bold text-pesantren uppercase tracking-wider mb-3">Program & Keunggulan Unit:</h4>
                 <div className="flex flex-wrap gap-2">
                   {item.unggulan.map((program, idx) => (
-                    <span 
-                      key={idx} 
-                      className="bg-[#134225]/10 text-[#134225] font-semibold text-xs sm:text-sm px-3.5 py-1.5 rounded-full border border-[#134225]/20"
-                    >
+                    <span key={idx} className="bg-[#134225]/10 text-[#134225] font-semibold text-xs sm:text-sm px-3.5 py-1.5 rounded-full border border-[#134225]/20">
                       ✨ {program}
                     </span>
                   ))}
                 </div>
               </div>
-
-              {/* Bagian Kajian Kitab / Materi Belajar */}
-              {item.kitab && item.kitab.length > 0 && (
-                <div className="border-t border-gray-100 pt-4">
-                  <h4 className="text-sm font-bold text-gray-800 uppercase tracking-wider mb-3">
-                    📖 Kajian Kitab / Materi Utama:
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {item.kitab.map((kitabItem, idx) => (
-                      <span 
-                        key={idx} 
-                        className="bg-gray-100 text-gray-700 text-xs sm:text-sm px-3 py-1 rounded-lg border border-gray-200 font-medium"
-                      >
-                        {kitabItem}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
-
             </div>
           </FadeIn>
         ))}
