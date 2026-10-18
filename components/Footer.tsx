@@ -62,7 +62,7 @@ export default function Footer() {
                 </span>
                 <div>
                   <h4 className="text-white font-medium mb-1">Alamat</h4>
-                  <p className="text-gray-400 leading-relaxed">Tanah Laut-Kalimantan Selatan-Indonesia</p>
+                  <p className="text-gray-400 leading-relaxed">Al Kautsar - Satui -Kalimantan Selatan-Indonesia</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
@@ -80,7 +80,7 @@ export default function Footer() {
                 </span>
                 <div>
                   <h4 className="text-white font-medium mb-1">Email</h4>
-                  <p className="text-gray-400">info@myalkautsar.info</p>
+                  <p className="text-gray-400">alkautsar176@gmail.com</p>
                 </div>
               </li>
             </ul>
