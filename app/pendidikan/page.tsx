@@ -8,7 +8,7 @@ const unitPendidikan = [
     kepala: "Ustadz Abdul Manaf S.Pd", 
     foto: "/images/abdul-manaf.png",
     deskripsi: "Pendidikan keagamaan mendasar yang memfokuskan pada pendalaman ilmu fiqih, akidah akhlak, tauhid, serta dasar-dasar pembacaan kitab kuning dan Al-Quran bagi santri pemula.",
-    unggulan: [" Lughah arabiyah", "Dasar Kitab Kuning", "Praktik Ibadah Harian"]
+    unggulan: [" Lughah arabiyah", "Dasar Kitab Kuning", "Praktik Ibadah Harian" , " Kalighrafi "]
   },
   { 
     nama: "Madrasah Ibtidaiyah (MI)", 
@@ -30,7 +30,7 @@ const unitPendidikan = [
     kepala: "Siti Mudrikah S.Pd", 
     foto: "/images/siti-mudrikah.png",
     deskripsi: "Pendidikan tingkat menengah atas yang mempersiapkan santri agar siap melanjutkan ke perguruan tinggi unggulan sekaligus memiliki kemandirian dakwah dan keilmuan matang.",
-    unggulan: ["extrakulikuler Pramuka", "Keterampilan Teknologi & Komputer", "Bimbingan Masuk Perguruan Tinggi"],
+    unggulan: ["Extrakulikuler Pramuka", "Keterampilan Teknologi & Komputer", "Bimbingan Masuk Perguruan Tinggi"],
     akreditasi: "Terakreditasi A"
   },
 ];
