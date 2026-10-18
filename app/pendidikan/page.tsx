@@ -4,11 +4,11 @@ import FadeIn from "@/components/FadeIn";
 
 const unitPendidikan = [
   { 
-    nama: "Madrasah Diniyah (Ula & Wustho)", 
+    nama: "Madrasah Diniyah ( pendidikan non - formal )", 
     kepala: "Ustadz Abdul Manaf S.Pd", 
     foto: "/images/abdul-manaf.png",
     deskripsi: "Pendidikan keagamaan mendasar yang memfokuskan pada pendalaman ilmu fiqih, akidah akhlak, tauhid, serta dasar-dasar pembacaan kitab kuning dan Al-Quran bagi santri pemula.",
-    unggulan: ["Tahsin & Tahfidz Al-Quran", "Dasar Kitab Kuning", "Praktik Ibadah Harian"]
+    unggulan: [" Lughah arabiyah", "Dasar Kitab Kuning", "Praktik Ibadah Harian"]
   },
   { 
     nama: "Madrasah Ibtidaiyah (MI)", 
@@ -22,7 +22,7 @@ const unitPendidikan = [
     kepala: "Irwan Subandi S.Pd", 
     foto: "/images/irwan-subandi.png",
     deskripsi: "Pendidikan tingkat menengah pertama yang membekali santri dengan penguasaan ilmu pengetahuan umum serta pendalaman ilmu agama dan kedisiplinan pesantren.",
-    unggulan: ["Kajian Kitab Fiqih & Nahwu Shorof", "Ekstrakurikuler Pramuka & Pidato", "Pembinaan Akhlak Remaja"],
+    unggulan: ["Kurikulum Nasional & Nahwu Shorof", "Ekstrakurikuler Pramuka ", "Pembinaan Akhlak Remaja"],
     akreditasi: "Terakreditasi B"
   },
   { 
@@ -30,7 +30,7 @@ const unitPendidikan = [
     kepala: "Siti Mudrikah S.Pd", 
     foto: "/images/siti-mudrikah.png",
     deskripsi: "Pendidikan tingkat menengah atas yang mempersiapkan santri agar siap melanjutkan ke perguruan tinggi unggulan sekaligus memiliki kemandirian dakwah dan keilmuan matang.",
-    unggulan: ["Penguasaan Kitab Kuning Lanjutan", "Keterampilan Teknologi & Komputer", "Bimbingan Masuk Perguruan Tinggi"],
+    unggulan: ["extrakulikuler Pramuka", "Keterampilan Teknologi & Komputer", "Bimbingan Masuk Perguruan Tinggi"],
     akreditasi: "Terakreditasi A"
   },
 ];
