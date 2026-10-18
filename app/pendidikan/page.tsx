@@ -4,6 +4,14 @@ import FadeIn from "@/components/FadeIn";
 
 const unitPendidikan = [
   { 
+    nama: "TK Alwiyah", 
+    kepala: "Muhrotul Jarniah S.Pd", 
+    foto: "/images/muhrotul-jarniah.png",
+    deskripsi: "Pendidikan anak usia dini berbasis Islam yang menanamkan nilai-nilai keimanan, pembentukan karakter, serta pengembangan motorik dan kreativitas anak sejak dini dalam suasana yang menyenangkan.",
+    unggulan: ["Dasar-dasar Keislaman", "Pembentukan Karakter Anak", "Motorik & Kreativitas", "Bermain Sambil Belajar"],
+    akreditasi: "Terakreditasi B"
+  },
+  { 
     nama: "Madrasah Diniyah ( pendidikan non - formal )", 
     kepala: "Ustadz Abdul Manaf S.Pd", 
     foto: "/images/abdul-manaf.png",
@@ -55,7 +63,7 @@ export default function PendidikanPage() {
             <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl transition duration-300">
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 border-b border-gray-100 pb-6 mb-6">
                 <div className="flex-shrink-0 w-24 h-24 rounded-full overflow-hidden border-4 border-pesantren-light shadow-md relative bg-gray-100">
-                  <img src={item.foto} alt={item.kepala} className="w-full h-full object-cover object-top" />
+                  <img src={item.foto} alt={item.kepala} className="w-full h-full object-cover object-top" onError={(e)=>{(e.target as HTMLElement).style.display='none'}} />
                 </div>
                 <div className="text-center sm:text-left flex-grow">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-1">
