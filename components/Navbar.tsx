@@ -1,3 +1,4 @@
+// components/Navbar.tsx
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -26,17 +27,18 @@ export default function Navbar() {
             <a href="/pendidikan" className="hover:text-[#134225] transition">Pendidikan</a>
             <a href="/kitab" className="hover:text-[#134225] transition">Kajian Kitab</a>
             <a href="/fasilitas" className="hover:text-[#134225] transition">Fasilitas</a>
+            <a href="/peraturan" className="hover:text-[#134225] transition text-[#134225]">Peraturan</a>
             <a href="/psb" className="hover:text-[#134225] transition">PSB</a>
           </div>
 
           {/* Hamburger Menu Mobile */}
           <div className="md:hidden flex items-center">
             <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700 hover:text-[#134225] focus:outline-none p-2">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 {isOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                 ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                 )}
               </svg>
             </button>
@@ -53,6 +55,7 @@ export default function Navbar() {
           <a href="/pendidikan" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-[#134225]">Pendidikan</a>
           <a href="/kitab" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-[#134225]">Kajian Kitab</a>
           <a href="/fasilitas" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-[#134225]">Fasilitas</a>
+          <a href="/peraturan" className="block px-3 py-2 rounded-md text-base font-medium text-[#134225] bg-green-50">Peraturan</a>
           <a href="/psb" className="block px-3 py-2 rounded-md text-base font-medium text-[#134225] bg-gray-50 hover:bg-gray-100">Daftar PSB</a>
         </div>
       )}
